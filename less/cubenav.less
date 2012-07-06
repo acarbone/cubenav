@@ -147,6 +147,10 @@ html{
 		-webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
 		-webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
 	background-size: 13px, 29px, 37px, 53px;
+	font-family: 'Fredoka One', cursive;
+	text-shadow:1px 1px 0 #eee;
+	font-size:64px;
+	color:#222;
 }
 
 nav{
@@ -154,7 +158,8 @@ nav{
 	top:50%;
 	left:50%;
 	-webkit-transform-style: preserve-3d;
-	-webkit-transform:rotatex(50deg) rotatey(30deg) rotatez(1deg);
+	-webkit-transform:rotatex(-5deg) rotatey(-5deg) rotatez(0deg);
+	-webkit-transition:all .5s ease-out;
 	ul{
 		position:relative;
 		list-style:none;
@@ -167,8 +172,20 @@ nav{
 			width:100px;
 			height:100px;
 			position:absolute;
+			box-shadow:inset 0 0 1px #000;
+			text-align:center;
+			line-height:100px;
+			span{
+				display:block;
+				width: 100px;
+				height: 100px;
+				-webkit-transform: rotateY(-160deg);
+				&.fifthSpan{
+					-webkit-transform:rotatex(-160deg);
+				}
+			}
 			&.front{
-				background:#ccc;
+				background: -webkit-linear-gradient(top left, white, #D4A6F2 30%, rgba(170, 127, 190, 0.9), #5F0345);
 				top:0;
 				left:0;
 			}
@@ -200,7 +217,7 @@ nav{
 				-webkit-transform: rotateY(90deg);
 			}
 			&.right{
-				background:blue;
+				background: -webkit-linear-gradient(top left, white, #A6D4F2 30%, rgba(127, 170, 190, 0.9), #0F4355);
 				top:0;
 				right:0;
 				-webkit-transform-origin: right bottom;
@@ -208,6 +225,11 @@ nav{
 			}
 		}
 	}
-
-
 }
+
+
+.second nav{ -webkit-transform:rotatex(-5deg) rotatey(-95deg) rotatez(0deg); }
+.third nav{ -webkit-transform:rotatex(-5deg) rotatey(-185deg) rotatez(0deg); }
+.fourth nav{ -webkit-transform:rotatex(-5deg) rotatey(-275deg) rotatez(0deg); }
+.fifth nav{ -webkit-transform:rotatex(87deg) rotatey(0deg) rotatez(5deg); }
+.sixth nav{ -webkit-transform:rotatex(-93deg) rotatey(0deg) rotatez(-5deg); }

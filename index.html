@@ -6,17 +6,28 @@
 	<meta name="description" content="">
 	<link rel="stylesheet/less" type="text/css" href="/less/cubenav.less">
 	<script src="/js/lib/less.js"></script>
+	<link href='//fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+	<script type="text/javascript">
+	function setHtmlClassName(className) {
+		document.getElementsByTagName('html')[0].className = className;
+	}
+	</script>
 </head>
 <body>
-
+	<a href="#first" onclick="setHtmlClassName('first');">1</a>
+	<a href="#second" onclick="setHtmlClassName('second');">2</a>
+	<a href="#third" onclick="setHtmlClassName('third');">3</a>
+	<a href="#fourth" onclick="setHtmlClassName('fourth');">4</a>
+	<a href="#fifth" onclick="setHtmlClassName('fifth');">5</a>
+	<a href="#sixth" onclick="setHtmlClassName('sixth');">6</a>
 	<nav>
 		<ul>
-		  <li class="front"></li>
-		  <li class="right"></li>
-		  <li class="left"></li>
-		  <li class="back"></li>
-		  <li class="bottom"></li>
-		  <li class="top"></li>
+		  <li class="front">1</li>
+		  <li class="right"><span>2</span></li>
+		  <li class="back"><span>3</span></li>
+		  <li class="left"><span>4</span></li>
+		  <li class="bottom"><span class="fifthSpan">5</span></li>
+		  <li class="top"><span class="fifthSpan">6</span></li>
 		</ul>
 	</nav>
 
