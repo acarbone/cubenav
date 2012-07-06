@@ -44,10 +44,6 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-// Focus states
-a:focus {
-  .tab-focus();
-}
 // Hover & Active
 a:hover,
 a:active {
@@ -85,7 +81,6 @@ img {
 #map_canvas img {
   max-width: none;
 }
-
 // Forms
 // -------------------------
 
@@ -144,66 +139,12 @@ textarea {
   }
 }
 
-// CSS3 PROPERTIES
-// --------------------------------------------------
-
-// Border Radius
-.border-radius(@radius) {
-  -webkit-border-radius: @radius;
-     -moz-border-radius: @radius;
-          border-radius: @radius;
+html{
+	height: 100%;
+	background-color: #CEC5BA;
+	background-image: -webkit-linear-gradient(0, rgba(255,255,255,.07) 50%, transparent 50%),
+		-webkit-linear-gradient(0, rgba(255,255,255,.13) 50%, transparent 50%),
+		-webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.17) 50%),
+		-webkit-linear-gradient(0, transparent 50%, rgba(255,255,255,.19) 50%);
+	background-size: 13px, 29px, 37px, 53px;
 }
-
-// Drop shadows
-.box-shadow(@shadow) {
-  -webkit-box-shadow: @shadow;
-     -moz-box-shadow: @shadow;
-          box-shadow: @shadow;
-}
-
-// Transitions
-.transition(@transition) {
-  -webkit-transition: @transition;
-     -moz-transition: @transition;
-      -ms-transition: @transition;
-       -o-transition: @transition;
-          transition: @transition;
-}
-
-// Transformations
-.rotate(@degrees) {
-  -webkit-transform: rotate(@degrees);
-     -moz-transform: rotate(@degrees);
-      -ms-transform: rotate(@degrees);
-       -o-transform: rotate(@degrees);
-          transform: rotate(@degrees);
-}
-.scale(@ratio) {
-  -webkit-transform: scale(@ratio);
-     -moz-transform: scale(@ratio);
-      -ms-transform: scale(@ratio);
-       -o-transform: scale(@ratio);
-          transform: scale(@ratio);
-}
-.translate(@x, @y) {
-  -webkit-transform: translate(@x, @y);
-     -moz-transform: translate(@x, @y);
-      -ms-transform: translate(@x, @y);
-       -o-transform: translate(@x, @y);
-          transform: translate(@x, @y);
-}
-.skew(@x, @y) {
-  -webkit-transform: skew(@x, @y);
-     -moz-transform: skew(@x, @y);
-      -ms-transform: skew(@x, @y);
-       -o-transform: skew(@x, @y);
-          transform: skew(@x, @y);
-}
-.translate3d(@x, @y, @z) {
-  -webkit-transform: translate(@x, @y, @z);
-     -moz-transform: translate(@x, @y, @z);
-      -ms-transform: translate(@x, @y, @z);
-       -o-transform: translate(@x, @y, @z);
-          transform: translate(@x, @y, @z);
-}
-
