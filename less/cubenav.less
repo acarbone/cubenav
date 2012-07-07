@@ -138,7 +138,7 @@ textarea {
     clear: both;
   }
 }
-
+html, body{ margin:0; padding:0; }
 html{
 	height: 100%;
 	background-color: #CEC5BA;
@@ -149,17 +149,39 @@ html{
 	background-size: 13px, 29px, 37px, 53px;
 	font-family: 'Fredoka One', cursive;
 	text-shadow:1px 1px 0 #eee;
-	font-size:64px;
 	color:#222;
 }
 
 nav{
+	position:fixed;
+	width:100%;
+	height:40px;
+	background-color:#222;
+	background-image:-webkit-linear-gradient(top, transparent, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.03));
+	line-height:40px;
+	a{
+		float:left;
+		padding:0 20px;
+		color:white;
+		text-shadow:none;
+		font-weight:normal;
+		font-size:18px;
+		text-decoration:none;
+		-webkit-transition:all .2s ease-out;
+		&:hover{
+			-webkit-transform:scale(1.2);
+		}
+	}
+}
+
+.cube{
 	position:absolute;
 	top:50%;
 	left:50%;
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform:rotatex(-5deg) rotatey(-5deg) rotatez(0deg);
 	-webkit-transition:all .5s ease-out;
+	font-size:64px;
 	ul{
 		position:relative;
 		list-style:none;
@@ -228,8 +250,8 @@ nav{
 }
 
 
-.second nav{ -webkit-transform:rotatex(-5deg) rotatey(-95deg) rotatez(0deg); margin:-6px 0 0 -51px; }
-.third nav{ -webkit-transform:rotatex(-5deg) rotatey(-185deg) rotatez(0deg); }
-.fourth nav{ -webkit-transform:rotatex(-5deg) rotatey(-275deg) rotatez(0deg); }
-.sixth nav{ -webkit-transform:rotatex(87deg) rotatey(0deg) rotatez(5deg); }
-.fifth nav{ -webkit-transform:rotatex(-93deg) rotatey(0deg) rotatez(-5deg); }
+.second .cube{ -webkit-transform:rotatex(-5deg) rotatey(-95deg) rotatez(0deg); margin:-6px 0 0 -51px; }
+.third .cube{ -webkit-transform:rotatex(-5deg) rotatey(-185deg) rotatez(0deg); }
+.fourth .cube{ -webkit-transform:rotatex(-5deg) rotatey(-275deg) rotatez(0deg); }
+.sixth .cube{ -webkit-transform:rotatex(87deg) rotatey(0deg) rotatez(5deg); }
+.fifth .cube{ -webkit-transform:rotatex(-93deg) rotatey(0deg) rotatez(-5deg); }
